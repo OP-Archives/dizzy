@@ -1,6 +1,6 @@
 import { styled, Typography } from "@mui/material";
 import CustomLink from "./CustomLink";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/logo.avif";
 
 const NotFound = styled((props) => {
   const { channel } = props;

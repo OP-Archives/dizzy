@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
 import { CssBaseline, styled } from "@mui/material";
-import { yellow } from "@mui/material/colors";
 import Loading from "./utils/Loading";
 
 const Vods = lazy(() => import("./vods/Vods"));
@@ -24,7 +23,7 @@ export default function App() {
         default: "#0e0e10",
       },
       primary: {
-        main: yellow[500],
+        main: "#A9D3FF",
       },
       secondary: {
         main: "#292828",

@@ -1,6 +1,5 @@
-import React from "react";
 import { AppBar, Toolbar, Typography, useMediaQuery, Box, Divider } from "@mui/material";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/logo.avif";
 import CustomLink from "../utils/CustomLink";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SvgIcon from "@mui/material/SvgIcon";
