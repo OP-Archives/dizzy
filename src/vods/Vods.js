@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Box, Typography, Pagination, Grid, useMediaQuery, PaginationItem, TextField, InputAdornment, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import SimpleBar from "simplebar-react";
 import Footer from "../utils/Footer";
@@ -223,9 +223,9 @@ export default function Vods() {
           )}
         </Box>
         {vods ? (
-          <Grid container spacing={2} sx={{ mt: 1, justifyContent: "center" }}>
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ mt: 2, justifyContent: "center" }}>
             {vods.map((vod, _) => (
-              <Vod gridSize={2.1} key={vod.id} vod={vod} isMobile={isMobile} />
+              <Vod key={vod.id} vod={vod} isMobile={isMobile} />
             ))}
           </Grid>
         ) : (

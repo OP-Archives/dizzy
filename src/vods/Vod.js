@@ -1,9 +1,7 @@
-import React from "react";
 import { Box, Typography, Link, Grid } from "@mui/material";
 import CustomLink from "../utils/CustomLink";
 import sadge from "../assets/sadge.jpg";
 import Chapters from "./ChaptersMenu";
-import WatchMenu from "./WatchMenu";
 import CustomWidthTooltip from "../utils/CustomToolTip";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat.js";
@@ -11,8 +9,8 @@ dayjs.extend(localizedFormat);
 
 export default function Vod(props) {
   const { vod } = props;
-  const DEFAULT_VOD = vod.youtube.length > 0 ? `/youtube/${vod.id}` : vod.games.length > 0 ? `/games/${vod.id}` : `/manual/${vod.id}`;
-  const DEFAULT_THUMBNAIL = vod.thumbnail_url ? vod.thumbnail_url : vod.games.length > 0 ? vod.games[0].thumbnail_url : sadge;
+  const DEFAULT_VOD = vod.youtube.length > 0 ? `/youtube/${vod.id}` : vod.games.length > 0 ? `/games/${vod.id}` : `#`;
+  const DEFAULT_THUMBNAIL = vod.youtube.length > 0 ? vod.youtube[0].thumbnail_url : vod.games.length > 0 ? vod.games[0].thumbnail_url : vod.thumbnail_url ? vod.thumbnail_url : sadge;
 
   return (
     <Grid size="auto" sx={{ maxWidth: "20rem", flexBasis: "20rem" }}>
@@ -45,7 +43,7 @@ export default function Vod(props) {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ mt: 1, mb: 1, display: "flex", alignItems: "center" }}>
+      <Box sx={{ mt: 1, mb: 1, display: "flex" }}>
         {vod.chapters && vod.chapters.length > 0 && <Chapters vod={vod} />}
         <Box sx={{ minWidth: 0, width: "100%" }}>
           <Box sx={{ p: 0.5 }}>
@@ -58,9 +56,6 @@ export default function Vod(props) {
                 </CustomLink>
               </span>
             </CustomWidthTooltip>
-          </Box>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <WatchMenu vod={vod} />
           </Box>
         </Box>
       </Box>
