@@ -133,10 +133,10 @@ export default function Vods() {
   }, [limit, page, filter, filterStartDate, filterEndDate, filterTitle, filterGame]);
 
   const changeFilter = (evt) => {
-    setFilter(evt.target.value)
+    setFilter(evt.target.value);
     //reset page to 1 when filter changes
     navigate(`${location.pathname}?page=1`);
-  }
+  };
 
   const handleSubmit = (e) => {
     const value = e.target.value;
@@ -175,8 +175,8 @@ export default function Vods() {
             </Typography>
           )}
         </Box>
-        <Box sx={{ pl: !isMobile ? 15 : 5, pr: !isMobile ? 15 : 5, pt: 1, display: "flex", flexDirection: "row", alignItems: "center" }}>
-          <FormControl>
+        <Box sx={{ pl: !isMobile ? 12 : 1, pr: !isMobile ? 12 : 1, pt: 1, display: "flex", flexDirection: "row", alignItems: "center" }}>
+          <FormControl sx={{ display: "flex" }}>
             <InputLabel id="select-label">Filter</InputLabel>
             <Select labelId="select-label" label={filter} value={filter} onChange={changeFilter} autoWidth>
               {FILTERS.map((data, i) => {
