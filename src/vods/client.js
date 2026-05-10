@@ -1,4 +1,4 @@
-const TENANT_ID = import.meta.env.VITE_CHANNEL;
+const TENANT_ID = import.meta.env.VITE_CHANNEL.toLowerCase();
 const apiBase = import.meta.env.VITE_ARCHIVE_API_BASE;
 
 async function fetchJson(url, options = {}) {
@@ -51,7 +51,7 @@ export async function getVodComments(vodId, params = {}) {
   return fetchJson(url);
 }
 
-export async function getGames(params = {}) {
+export async function listGames(params = {}) {
   const query = new URLSearchParams();
 
   if (params.game_name) query.set('game_name', params.game_name);
@@ -99,15 +99,3 @@ export async function getChaptersLibrary(params = {}) {
 export async function getTwitchBadges() {
   return fetchJson(`${apiBase}/${TENANT_ID}/badges/twitch`);
 }
-
-export default {
-  listVods,
-  getVod,
-  getVodByPlatform,
-  getVodEmotes,
-  getVodComments,
-  getGames,
-  getGamesLibrary,
-  getChaptersLibrary,
-  getTwitchBadges,
-};
