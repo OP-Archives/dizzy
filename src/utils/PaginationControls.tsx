@@ -83,7 +83,7 @@ export default function PaginationControls({ page, totalPages, preserveParams, o
               <Link
                 to={buildPageUrl(page - 1)}
                 onMouseEnter={() => onHoverPage && onHoverPage(page - 1)}
-                className="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-lg hover:bg-gray-800 text-sm text-white"
+                className="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-lg hover:bg-dark-hover text-sm text-white"
               >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -106,7 +106,7 @@ export default function PaginationControls({ page, totalPages, preserveParams, o
                   className={`w-9 h-9 flex items-center justify-center border rounded-lg text-sm ${
                     p === page
                       ? 'bg-primary/20 border-primary text-primary'
-                      : 'border-gray-600 hover:bg-gray-800 text-white'
+                      : 'border-gray-600 hover:bg-dark-hover text-white'
                   }`}
                 >
                   {p}
@@ -126,7 +126,7 @@ export default function PaginationControls({ page, totalPages, preserveParams, o
               <Link
                 to={buildPageUrl(page + 1)}
                 onMouseEnter={() => onHoverPage && onHoverPage(page + 1)}
-                className="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-lg hover:bg-gray-800 text-sm text-white"
+                className="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-lg hover:bg-dark-hover text-sm text-white"
               >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
