@@ -1,8 +1,8 @@
+import { Video, Library, AlertCircle } from 'lucide-react';
 import { YouTubeIcon, TwitterIcon, DiscordIcon, TwitchIcon } from '../assets/icons';
 import CustomLink from '../utils/CustomLink';
 import { useMediaQuery } from '../utils/useMediaQuery';
 import Drawer from './drawer';
-import { Video, Library, AlertCircle } from 'lucide-react';
 
 const socials = [
   { path: `https://www.youtube.com/c/dizzy1`, icon: <YouTubeIcon className="text-primary" /> },
