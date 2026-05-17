@@ -146,7 +146,7 @@ export default function Chapters({ vod }: ChaptersProps) {
           {!expanded && chaptersArray.length > 15 && (
             <button
               onClick={() => setExpanded(true)}
-              className="w-full text-center py-2 text-xs text-blue-400 font-semibold bg-dark hover:bg-dark-hover transition-colors cursor-pointer block"
+              className="w-full text-center py-2 text-xs text-primary font-semibold bg-dark hover:bg-dark-hover transition-colors cursor-pointer block"
             >
               {`Show ${chaptersArray.length - 15} More Chapters...`}
             </button>

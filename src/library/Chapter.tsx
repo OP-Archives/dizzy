@@ -18,7 +18,7 @@ export default function Chapter({ chapter, priority }: ChapterProps) {
       to={`/vods?game_id=${chapter.game_id}`}
       className="rounded cursor-pointer no-underline block hover:shadow-[0_0_8px_rgba(255,255,255,.6)] transition-shadow min-w-0"
     >
-      <div className="w-full relative overflow-hidden rounded-t aspect-[400/530] bg-[#1a1a1b]">
+      <div className="w-full relative overflow-hidden rounded-t aspect-[400/530] bg-dark-light">
         {chapter.image ? (
           <img
             src={getImage(chapter.image, 400, 530)}

@@ -240,7 +240,7 @@ export default function Vods({ logo }: { logo: string }) {
           {gameId && (
             <button
               onClick={() => navigate(-1)}
-              className="mr-2 bg-[#7BA8E0] text-white px-3 py-1.5 rounded hover:bg-[#6A98D0] transition-colors flex items-center gap-1 text-sm"
+              className="mr-2 bg-primary/20 border border-primary text-primary px-3 py-1.5 rounded hover:bg-primary/10 transition-colors flex items-center gap-1 text-sm"
             >
               <ArrowLeft size={16} /> Back
             </button>
