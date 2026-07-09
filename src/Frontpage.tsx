@@ -45,7 +45,7 @@ export default function Frontpage() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2 justify-center">
                 {vodsToUse.map((vod: VodData) => (
-                  <Vod key={vod.id} vod={vod} isMobile={isMobile} />
+                  <Vod key={vod.id} vod={vod} />
                 ))}
               </div>
             </div>
